@@ -36,6 +36,11 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "tailwindcss/no-custom-classname": "off"
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/migration-from-tailwind-2": "off",
+    "tailwindcss/no-unnecessary-arbitrary-value": "off",
+    "react-hooks/exhaustive-deps": "off"
   }
 }

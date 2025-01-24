@@ -14,9 +14,9 @@ const HomeExtension: React.FC = () => {
 
     return (
         <div className="flex flex-col w-full mt-10">
-            {/* Content */}
+
             <div className="relative flex flex-col text-center items-center justify-center mx-auto z-10 text-black mt-20">
-                {/* Text with Star Icons */}
+
                 <div className="flex text-center items-center justify-center space-x-3">
                     <StarIcon className="w-4 h-4 text-black" />
                     <p className="text-[15px] font-pangram font-bold uppercase">
@@ -37,25 +37,25 @@ const HomeExtension: React.FC = () => {
             </div>
 
             <div className="bg-[#FFFAF2] sm:pr-16 py-16 px-0 sm:px-8 mt-20 relative overflow-hidden rounded-[20px]">
-                {/* Main Content Section */}
+
                 <div className="flex flex-col sm:flex-row justify-between items-center">
                     {/* Left Panel: Food Cards */}
                     <div className="grid grid-cols-3 gap-2 w-[95%] sm:w-1/2 z-20">
                         {foodCards.map((food, index) => {
-                            // Determine card opacity styles based on the position
+
                             let gradientClass = "";
 
                             if (
-                                (index >= 1 && index <= 2) || // Top row (1st, middle, last card)
-                                (index === 3 || index === 5) || // Second row (1st, last card)
-                                (index === 6 || index === 7) // Third row (1st, 2nd card)
+                                (index >= 1 && index <= 2) ||
+                                (index === 3 || index === 5) ||
+                                (index === 6 || index === 7)
                             ) {
                                 if (index >= 3 && index <= 5) {
-                                    gradientClass = "opacity-20"; // Second row lower opacity
+                                    gradientClass = "opacity-20";
                                 } else if (index >= 6 && index <= 7) {
-                                    gradientClass = "opacity-10"; // Third row slightly lower
+                                    gradientClass = "opacity-10";
                                 } else {
-                                    gradientClass = "opacity-30"; // Top row higher opacity
+                                    gradientClass = "opacity-30";
                                 }
                             }
 
@@ -91,16 +91,16 @@ const HomeExtension: React.FC = () => {
                         })}
                     </div>
 
-                    {/* Right Panel: Image + Floating Badges */}
+                    {/* Right Panel */}
                     <div className="relative w-full sm:w-2/4 flex justify-center items-center z-20 mt-8 sm:mt-0">
-                        {/* Background Image */}
+
                         <img
                             src={Person}
                             alt="Person"
                             className="rounded-lg w-[90%] h-auto shadow-lg"
                         />
 
-                        {/* Top Right Badge */}
+
                         <div className="absolute top-32 sm:top-40 font-sofia-sans right-4 sm:-right-12 border-white border-2 rounded-lg bg-[#D87023] text-white text-[10px] sm:text-[11px] px-2 py-2 shadow-lg">
                             <div className="font-bold p-1 rounded-full bg-[#77441E] w-[15%]">💵</div>
                             <div>
@@ -109,16 +109,16 @@ const HomeExtension: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Bottom Left Badges */}
+
                         <div className="absolute bottom-24 sm:bottom-40 left-3">
-                            {/* Badge 1 */}
+
                             <div className="bg-[#009F79] w-[140px] sm:w-[170px] text-white border-white border-2 font-sofia-sans text-[10px] sm:text-[11px] px-1 py-2 rounded-md shadow-lg flex items-center">
                                 <div className="font-bold p-1 rounded-full bg-[#1E735E] w-[15%]">👍🏽</div>
                                 <div className="ml-1">Picked by 314 people today</div>
                             </div>
                         </div>
 
-                        {/* Badge 2 */}
+
                         <div className="absolute bottom-[60px] sm:bottom-[100px] left-8 sm:left-14 flex flex-col space-y-4">
                             <div className="bg-[#009F79] w-[140px] sm:w-[170px] text-white border-white border-2 font-sofia-sans text-[10px] sm:text-[11px] px-1 py-2 rounded-md shadow-lg flex items-center">
                                 <div className="font-bold p-1 rounded-full bg-[#1E735E] w-[15%]">🧅</div>
@@ -126,7 +126,7 @@ const HomeExtension: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Badge 3 */}
+
                         <div className="absolute bottom-[20px] sm:bottom-[40px] left-12 sm:left-24 flex flex-col space-y-4">
                             <div className="bg-[#009F79] w-[140px] sm:w-[170px] text-white border-white border-2 font-sofia-sans text-[10px] sm:text-[11px] px-1 py-2 rounded-md shadow-lg flex items-center">
                                 <div className="font-bold p-1 rounded-full bg-[#1E735E] w-[15%]">🥩</div>
@@ -136,14 +136,14 @@ const HomeExtension: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Top-Left SVG */}
+
                 <img
                     src={Writup}
                     alt="Top Left Decoration"
                     className="absolute top-[65px] left-[-30px] w-auto h-20 z-10"
                 />
 
-                {/* Bottom-Right SVG */}
+
                 <img
                     src={Writup}
                     alt="Bottom Right Decoration"
@@ -152,7 +152,7 @@ const HomeExtension: React.FC = () => {
             </div>
 
             <div className="bg-white border w-[90%] sm:w-full mb-10 rounded-[20px] shadow-lg p-6 px-10 flex sm:flex-row flex-col sm:space-y-0 space-y-20 justify-between items-center mt-10 mx-auto">
-                {/* Text Section */}
+
                 <div>
                     <h3 className="font-pangram text-[#353542] sm:text-[35px] text-[47px] font-semibold">
                         Signup to <span className="px-4  bg-[#5F63E1] font-sofia-sans border-2 border-black text-white rounded-[40px] ">chowafrica</span> and say
@@ -164,7 +164,7 @@ const HomeExtension: React.FC = () => {
                     </h3>
                 </div>
 
-                {/* Button Section */}
+
                 <button className="bg-[#00A380] sm:text-md text-[25px] border-2 border-white font-sofia-sans text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-[#008066]">
                     JOIN WAITLIST
                 </button>

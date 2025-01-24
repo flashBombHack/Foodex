@@ -19,16 +19,15 @@ const Layout: React.FunctionComponent = () => {
 
     return (
         <div className="relative flex flex-col bg-white">
-            {/* Background Clouds */}
+
             <CloudIcon1 className="absolute z-10 sm:bottom-[1150px] bottom-[2150px] left- w-auto sm:h-[120px] h-[80px] animate-floating" />
             <CloudIcon className="absolute z-10 sm:bottom-[1150px] bottom-[2150px] -right-0 w-auto sm:h-[170px] h-[80px] animate-floating-reverse" />
 
-            {/* Top Bar (Visible only on mobile) */}
+
             <div className="flex items-center justify-between p-4 bg-white z-10 md:hidden">
-                {/* Logo (Left End) */}
+
                 <img src={logo} alt="Chow Africa Logo" className="w-auto h-14" />
 
-                {/* Right Section: Hamburger + Button */}
                 <div className="flex items-center space-x-2">
                     <button className="bg-[#D87023] font-sofia-sans text-white px-4 py-1 mr-5 rounded-[40px] font-medium">
                         Join Waitlist
@@ -39,7 +38,7 @@ const Layout: React.FunctionComponent = () => {
                 </div>
             </div>
 
-            {/* Main Layout */}
+
             <div className="relative flex">
                 {/* Sidebar */}
                 <div
@@ -49,7 +48,7 @@ const Layout: React.FunctionComponent = () => {
                     <Sidebar />
                 </div>
 
-                {/* Content Container with Fade-Up Animation */}
+
                 <div className="flex-1 animate-fadeUp">
                     <ContentContainer selectedItem={selectedItem} />
                 </div>

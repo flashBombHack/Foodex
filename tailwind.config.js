@@ -8,6 +8,7 @@ module.exports = {
       animation: {
         floating: 'floating 10s ease-in-out infinite',
         'floating-reverse': 'floating-reverse 12s ease-in-out infinite',
+        fadeUp: 'fadeUp 0.5s ease-out',
       },
       keyframes: {
         floating: {

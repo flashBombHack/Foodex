@@ -27,10 +27,10 @@ const Home: React.FC = () => {
                     const nextIndex = (phrases.indexOf(prev) + 1) % phrases.length;
                     return phrases[nextIndex];
                 });
-                setFadeIn(true); // Start fade-in
-                setTextOffset(0); // Reset the "Find chow" text position to original
-                setLineAnimationKey(prev => prev + 1); // Trigger line animation reset
-            }, 500); // Matching fade time
+                setFadeIn(true);
+                setTextOffset(0);
+                setLineAnimationKey(prev => prev + 1);
+            }, 500);
 
         }, 5000);
 
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
     return (
         <div className="bg-white">
             <div className="relative flex items-center justify-center h-auto bg-[#0E0E0E] sm:rounded-[15px] overflow-hidden">
-                {/* Background Circles */}
+
                 <div
                     className="absolute inset-0 w-full h-full grid"
                     style={{
@@ -58,9 +58,9 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col w-full">
-                    {/* Content */}
+
                     <div className="relative mx-auto z-10 text-white mt-10 sm:mt-20 px-4 sm:px-0">
-                        {/* Text with Star Icons */}
+
                         <div className="flex items-center justify-center space-x-2 sm:space-x-3">
                             <StarIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                             <p className="text-[12px] sm:text-[15px] font-pangram font-bold uppercase">
@@ -109,14 +109,14 @@ const Home: React.FC = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 sm:mt-10">
-                            {/* Text Field */}
+
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 className="font-sofia-sans w-[250px] sm:w-[300px] px-5 py-4 sm:py-3 text-black text-[13px] sm:text-[15px] placeholder-black bg-[#F2F3F7] border border-[#D6DAD9] rounded-[15px] focus:outline-none"
                             />
 
-                            {/* Button */}
+
                             <button
                                 className="uppercase font-sofia-sans px-8 sm:px-8 py-2 sm:py-3 text-white text-[13px] sm:text-[15px] font-light bg-[#009F79] border-[2px] border-white rounded-[30px] hover:bg-[#007F63] transition-all duration-300"
                             >
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
                             />
                         </div>
 
-                        {/* Marquee Wrapper animate-marquee */}
+
                         <div className="lg:w-[1200px] sm:w-[600px] w-[400px] overflow-hidden relative z-20">
                             {/* Marquee Wrapper */}
                             <div className="marquee-wrapper">
@@ -175,7 +175,6 @@ const Home: React.FC = () => {
                             </div>
 
                         </div>
-                        {/* Orange Circle */}
                         <div
                             className="absolute opacity-40 left-[-60px] bottom-10 bg-transparent border-[8px] border-[#D87023] w-[400px] h-[400px] rounded-full z-10"
                         ></div>

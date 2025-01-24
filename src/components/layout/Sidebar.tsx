@@ -12,7 +12,7 @@ const Sidebar: React.FC = () => {
       {/* Logo */}
       <img src={logo} alt="Chow Africa Logo" className="mb-20 w-auto h-20" />
 
-      {/* Sidebar Items */}
+
       <nav className="flex flex-col  w-full space-y-6 px-4">
         <a href="/" className={activeLinkClass}>
           Home
@@ -52,12 +52,12 @@ const Sidebar: React.FC = () => {
 
       {/* Gradient Circle Section */}
       <div className="absolute top-[110%] left-0 flex gap-0 mt-auto">
-        {/* Vertical Rows */}
+
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className="flex flex-col items-center gap-0">
-            {/* Circles in Each Column */}
+
             {[...Array(4)].map((_, colIndex) => {
-              // Calculate opacity based on the position
+
               const opacity = 0.04 + (0.04 * colIndex);
               return (
                 <div

@@ -1,4 +1,3 @@
-// src/components/pages/JoinWaitlist.tsx
 import React, { useState } from 'react';
 
 const JoinWaitlist: React.FC = () => {
