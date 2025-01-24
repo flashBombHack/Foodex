@@ -6,12 +6,12 @@ import { ReactComponent as CloudIcon1 } from '../../assets/CloudIcon1.svg';
 import logo from '../../assets/FoodexLogo.svg';
 
 const Layout: React.FunctionComponent = () => {
-    const [selectedItem, setSelectedItem] = useState<string>('home');
+    const [selectedItem] = useState<string>('home');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const handleSelect = (item: string) => {
-        setSelectedItem(item);
-    };
+    // const handleSelect = (item: string) => {
+    //     setSelectedItem(item);
+    // };
 
     const handleSidebarToggle = () => {
         setIsSidebarOpen(!isSidebarOpen);
