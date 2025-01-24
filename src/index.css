@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Pangram:wght@400;700&family=Sofia+Sans:wght@400;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-courgette {
+  font-family: 'Courgette', sans-serif;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('./fonts/Pangram-Regular.otf') format('opentype'),
+    url('./fonts/Pangram-Bold.otf') format('opentype'),
+    url('./fonts/Pangram-ExtraLight.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('./fonts/Pangram-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('./fonts/Pangram-Light.otf') format('opentype');
+  font-weight: 700;
+  font-style: light;
+}
+
+.font-sofia-sans {
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+@keyframes brushstroke {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-brushstroke {
+  animation: brushstroke 1s ease-out forwards;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    border-color: #009F79;
+  }
+
+  50%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+.animate-typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: typing 1s steps(10) forwards, blink 0.9s step-end infinite;
+  font-family: 'Courgette', sans-serif;
+}
+
+@keyframes lineTyping {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-line-typing {
+  animation: lineTyping 1s steps(10) forwards;
+  background: linear-gradient(90deg, #D87023 10%, #D87023 50%, transparent 100%);
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s infinite alternate;
+}
